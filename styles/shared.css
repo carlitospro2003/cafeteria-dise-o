@@ -1,0 +1,166 @@
+/* Fondo y estilo general */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f8e6d6, #d7ccc8);
+    color: #3c2f2f;
+}
+
+/* Menú de navegación */
+header {
+    background-color: #6d4c41;
+    padding: 1rem 0;
+}
+
+nav ul.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+nav ul.menu li {
+    margin: 0 1rem;
+    position: relative;
+}
+
+nav ul.menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    transition: color 0.3s;
+}
+
+nav ul.menu li a:hover {
+    color: #d7ccc8;
+}
+
+/* Submenú desplegable */
+nav ul.menu li .submenu {
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #8e5e4c;
+    padding: 0;
+    margin: 0;
+    display: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+nav ul.menu li .submenu li {
+    margin: 0;
+}
+
+nav ul.menu li .submenu li a {
+    padding: 0.5rem 1rem;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+nav ul.menu li .submenu li a:hover {
+    background-color: #6d4c41;
+}
+
+/* Mostrar submenú */
+nav ul.menu li.dropdown:hover .submenu {
+    display: block;
+}
+
+/* Estilo para la sección de café */
+.coffee-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem; /* Espacio entre la imagen y la descripción */
+    padding: 2rem;
+}
+
+.coffee-description {
+    flex: 1; /* Toma el espacio disponible */
+    max-width: 50%; /* Limitar el tamaño máximo */
+}
+
+.coffee-description h1 {
+    font-size: 2.5rem;
+    color: #6d4c41;
+}
+
+.coffee-description h2 {
+    font-size: 1.8rem;
+    color: #8e5e4c;
+    margin-bottom: 1rem;
+}
+
+.coffee-description p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.coffee-image {
+    flex: 1;
+    max-width: 50%;
+}
+
+.coffee-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Estilos para el formulario de contacto */
+.contact-form {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #3c2f2f;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1.2rem;
+    border: 1px solid #d7ccc8;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.contact-form textarea {
+    height: 150px;
+    resize: none;
+}
+
+.contact-form button {
+    background-color: #6d4c41;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #8e5e4c;
+}

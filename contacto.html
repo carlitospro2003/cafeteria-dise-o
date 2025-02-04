@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <!-- Menú de navegación -->
+    <header>
+        <a href="#" class="logo">Cafeteria Chill</a>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li class="dropdown">
+                    <a href="#">Tipos de Cafe</a>
+                    <ul class="submenu">
+                        <li><a href="arabica.html">Arabica</a></li>
+                        <li><a href="robusta.html">Robusta</a></li>
+                        <li><a href="liberica.html">Liberica</a></li>
+                        <li><a href="excelsa.html">Excelsa</a></li>
+                    </ul>
+                </li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-section">
+            <h1>Contáctanos</h1>
+            <h2>Estamos aquí para ayudarte</h2>
+            <p>¿Tienes preguntas o necesitas más información? Por favor, completa el formulario a continuación o utiliza los medios de contacto disponibles.</p>
+            
+            <form class="contact-form">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" placeholder="Escribe tu nombre" required>
+                
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" placeholder="Escribe tu correo" required>
+                
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" placeholder="Escribe tu mensaje aquí" required></textarea>
+                
+                <button type="submit" class="submit-btn">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+</body>
+</html>

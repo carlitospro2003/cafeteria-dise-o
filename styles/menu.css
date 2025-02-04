@@ -1,0 +1,153 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Estilos del header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #6d4c41;
+    padding: 1rem 2rem;
+    position: relative;
+}
+
+/* Logo */
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+/* Menú principal */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    display: block;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #d7ccc8;
+}
+
+/* Submenú */
+.submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #8e5e4c;
+    min-width: 150px;
+    padding: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+/* Mantener submenú visible mientras el cursor esté sobre él */
+nav ul li:hover > .submenu,
+nav ul li:focus-within > .submenu {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Asegurar que el submenú se expanda correctamente */
+.submenu li {
+    width: 100%;
+}
+
+.submenu li a {
+    padding: 0.8rem 1rem;
+    display: block;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.submenu li a:hover {
+    background-color: #6d4c41;
+}
+
+/* Menú hamburguesa (responsivo) */
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* RESPONSIVIDAD */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+        margin-left: auto;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #6d4c41;
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        width: 100%;
+        padding: 1rem 0;
+    }
+
+    /* Mostrar menú al activar el checkbox */
+    #menu-toggle:checked + .menu-icon + nav {
+        display: flex;
+    }
+
+    /* Submenú en móviles: desplegable con hover */
+    .submenu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        display: none;
+    }
+
+    nav ul li:hover > .submenu,
+    nav ul li:focus-within > .submenu {
+        display: block;
+    }
+}

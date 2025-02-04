@@ -1,0 +1,80 @@
+/* Estilos generales para el body */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f8e6d6, #d7ccc8);
+    color: #3c2f2f;
+}
+
+/* Estilos para el header */
+header {
+    background-color: #6d4c41;
+    text-align: center;
+    padding: 3rem 0;
+    margin-bottom: 3rem;
+}
+
+/* Estilo del logo */
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    width: 150px; /* Ajusta el tamaño del logo */
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+/* Eslogan */
+.slogan {
+    font-size: 1.5rem;
+    color: #fff;
+    font-style: italic;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos del título principal y párrafos en el main */
+main h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: #6d4c41;
+    margin-top: 0;
+}
+
+main p {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #3c2f2f;
+    line-height: 1.6;
+}
+
+/* Estilo del menú (cargar dinámicamente) */
+#menu {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #3c2f2f;
+}
+
+/* Responsividad para móviles */
+@media (max-width: 768px) {
+    .logo {
+        width: 120px;
+    }
+
+    .slogan {
+        font-size: 1.2rem;
+    }
+
+    main h1 {
+        font-size: 2.5rem;
+    }
+
+    main p {
+        font-size: 1rem;
+    }
+}

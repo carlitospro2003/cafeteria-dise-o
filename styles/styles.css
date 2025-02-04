@@ -1,0 +1,305 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Estilos del header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #6d4c41;
+    padding: 1rem 2rem;
+    position: relative;
+}
+
+/* Menú principal */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    width: 100%;
+    justify-content: center; /* Centrado horizontal del menú */
+}
+
+nav ul li {
+    position: relative;
+}
+
+/* Logotipo centrado */
+.menu .logo-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.menu .logo-item img {
+    height: 40px; /* Ajusta el tamaño del logo */
+}
+
+/* Estilos del logo */
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+/* Menú principal */
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    display: block;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #d7ccc8;
+}
+
+/* Submenú */
+.submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #8e5e4c;
+    min-width: 150px;
+    padding: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+/* Mantener submenú visible mientras el cursor esté sobre él */
+nav ul li:hover > .submenu,
+nav ul li:focus-within > .submenu {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Asegurar que el submenú se expanda correctamente */
+.submenu li {
+    width: 100%;
+}
+
+.submenu li a {
+    padding: 0.8rem 1rem;
+    display: block;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.submenu li a:hover {
+    background-color: #6d4c41;
+}
+
+/* Menú hamburguesa (responsivo) */
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+        margin-left: auto;
+    }
+
+    /* Menú de navegación oculto por defecto en pantallas pequeñas */
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: #6d4c41;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    /* Mostrar menú cuando el checkbox está marcado */
+    #menu-toggle:checked + .menu-icon + nav ul {
+        display: flex;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        width: 100%;
+        padding: 1rem 0;
+    }
+
+    /* Submenú en móviles: desplegable con hover */
+    .submenu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        display: none;
+    }
+
+    nav ul li:hover > .submenu,
+    nav ul li:focus-within > .submenu {
+        display: block;
+    }
+}
+
+/* Estilos generales para el contenido */
+main {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+/* Sección del café */
+.coffee-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Texto de la descripción */
+.coffee-description {
+    flex: 1;
+    min-width: 300px;
+}
+
+.coffee-description h1,
+.coffee-description h2 {
+    color: #6d4c41;
+}
+
+.coffee-description p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Imágenes */
+.coffee-image {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    min-width: 300px;
+}
+
+.coffee-image img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    main {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .coffee-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .coffee-image img {
+        max-width: 100%;
+    }
+}
+
+/* Estilos del formulario de contacto */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-form label {
+    font-size: 1.1rem;
+    color: #6d4c41;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #6d4c41;
+    outline: none;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.submit-btn {
+    background-color: #6d4c41;
+    color: white;
+    font-size: 1.1rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.submit-btn:hover {
+    background-color: #8e5e4c;
+}
+
+/* Estilos del eslogan centrado */
+.slogan-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Hace que ocupe toda la pantalla */
+    background-color: #f5f5f5;
+}
+
+.slogan-text {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    color: #6d4c41;
+    text-align: center;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
